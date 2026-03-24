@@ -28,7 +28,8 @@ CREATE TABLE IF NOT EXISTS "order" (
 	"id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
 	"date" datetime NOT NULL,
 	"provider" INTEGER REFERENCES "provider"("id") NOT NULL,
-	"employee" INTEGER REFERENCES "auth_data"("id") NOT NULL
+	"employee" INTEGER REFERENCES "auth_data"("id") NOT NULL,
+	"is_active" INTEGER NOT NULL
 );
 CREATE TABLE IF NOT EXISTS "product" (
 	"id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
