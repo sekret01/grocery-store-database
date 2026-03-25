@@ -85,6 +85,7 @@ CREATE TABLE IF NOT EXISTS "order_product" (
 	"order" INTEGER,
 	"product" INTEGER,
 	"amount" INTEGER NOT NULL,
+	"unit_price"	NUMERIC NOT NULL,
 	PRIMARY KEY("id" AUTOINCREMENT),
 	FOREIGN KEY("product") REFERENCES "product"("id"),
 	FOREIGN KEY("order") REFERENCES "order"("id")
